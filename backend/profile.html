@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Card</title>
+    <link rel="stylesheet" type="text/css" href="style4.css">
+</head>
+
+<body>
+
+<div class="card-container">
+    <div class="upper-container">
+        <div class="image-container">
+            <img src="profile.png.svg" alt="Oops, missing photo"/>
+        </div>
+    </div>
+    <h3 id="welcome">WELCOME TO VYDYA!!</h3>
+    <div class="lower-container">
+        <div>
+           <!-- <h3 id="name">Loading...</h3>
+            <h4 id="email"></h4>
+            <h5>Password: <strong id="pass"></strong></h5>-->
+            <h2 style="color: darkgoldenrod;">Welcome to Vydya, your trusted companion on the journey towards better health. We're thrilled to have you join our family!</h2>
+        </div>
+        <div>
+            <h3>lets embark the journey with vydya</h3>
+        </div>
+        <div>
+            <a href="http://localhost:3000/home" class="btn">Thank you</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Retrieve the user data from localStorage
+    const userDataJSON = localStorage.getItem('userData');
+
+    // Check if userDataJSON is not null (data exists in localStorage)
+    if (userDataJSON) {
+        // Parse the JSON string back to an object
+        const userData = JSON.parse(userDataJSON);
+
+        // Display the user data on the page
+        document.getElementById('name').textContent = userData.name || 'Name Not Found';
+        document.getElementById('email').textContent = userData.email || 'Email Not Found';
+        document.getElementById('pass').textContent = userData.password || 'Password Not Found';
+    } else {
+        // Handle the case where no user data is found in localStorage
+        console.log('No user data found in localStorage.');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+
+:root {
+  --nav-color: #080ddd
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  height: 4rem;
+  background: #111827;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s;
+  color:white
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.loginwrapper button {
+  --primary-color: #645bff;
+  --secondary-color: #fff;
+  --hover-color: #06b6d4;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  display: inline;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+  height: 2.5rem;
+}
+
+.loginwrapper button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginwrapper button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.loginwrapper button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+
+}
+
+.loginwrapper button:hover {
+  background-color: var(--hover-color);
+}
+
+.loginwrapper button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.loginwrapper button:hover .arrow:before {
+  right: 0;
+}
+
+.loginwrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.Logo {
+  position: relative;
+  top: 0.5rem;
+    width: 19rem;
+    height: 14rem;
+}
+
+.activeNav::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.activeNav {
+  color:#f59e0b;
+}
+
+.close_open {
+  display: none;
+}
+.Options{
+  display: flex;
+  background: transparent;
+}
+
+@media (max-width: 1450px) {
+  .Options {
+    /* display: none; */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    background:#27272a;
+   right: 0;
+  }
+
+  .OptionsList {
+    flex-direction: column;
+    position: relative;
+    display: none;
+    width: 15rem;
+    gap: 0;
+  }
+  .loginNavWapper{
+    display: none;
+  }
+  .OptionsList li {
+    padding: 2rem;
+  }
+
+  .loginwrapper {
+    display: none;
+  }
+
+  .close_open {
+    display: block;
+    font-size: 2rem;
+    padding-right: 1rem;
+  }
+
+  .close_open button {
+    background: none;
+    border: none;
+    display: inline;
+    color: black;
+    padding-right: 5px;
+    font-size: 40px;
+  }
+}

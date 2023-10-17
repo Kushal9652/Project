@@ -1,0 +1,75 @@
+.bmibody {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: white;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.input-field {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px;
+}
+
+.select-field {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px;
+}
+
+.measurement {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.calculate-button,
+.clear-button {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.calculate-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.clear-button {
+    background-color: #FF5733;
+    color: white;
+}
+.select-field option[value="meter"] {
+    padding: 2px; /* Adjust the padding as needed */
+}
+#h_measurement{
+    padding: 2px;
+}
