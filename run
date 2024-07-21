@@ -4,5 +4,5 @@ verify oepning it in localhost/phpmyadmin
 check the database
 open the project folder in vscode which is placed in htdocs of xamp folder
 open ur terminal 
-npm start 
+npm start and opens in web
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
